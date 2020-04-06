@@ -30,7 +30,7 @@
               volume: .7,
             })
             racemusic.play({
-              volume: .5,
+              volume: .4,
               loop: true
             })
           }, this);
