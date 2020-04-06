@@ -14,7 +14,7 @@
 
         var background = this.add.image(400,200, 'background').setScale(1)
         var title = this.add.image(400,300,'title');
-        var rallyrules = this.add.text(180, 450, 'Get to the end first before the driver does!')
+        var rallyrules = this.add.text(180, 450, 'Get to the end first before the other driver does!')
         var instructions = this.add.text(50, 500, 'Player 1 controls WASD')
         var instructions2 = this.add.text(500, 500, 'Player 2 controls Arrowkeys')
         var text = this.add.text(285,550, 'Click Here to Start!');
