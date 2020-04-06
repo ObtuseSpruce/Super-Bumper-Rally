@@ -2,11 +2,13 @@
 
 #Objective:
 The object of the game is to get from one end of the race track to ther other!
+
 However there can be only one winner so make sure you get to the finish line first!
 
 
 #Controls:
 Player 1: use W, A, and D, keys on the keyboard to move the vehicle forward and side to side.
+
 Player 2: use the arrow keys to move your vehicle forward and side to side.
 
 
