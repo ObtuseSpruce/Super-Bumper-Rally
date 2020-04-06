@@ -12,7 +12,6 @@ preload() {
         this.load.image('mapTiles', './assets/spritesheet_tiles.png')
         this.load.image('finish', './assets/finishline.png')
         this.load.image('smoke', './assets/smoke2.png')
-        this.load.image('tire', './assets/tiretrack2.png')
         this.load.image('beachball', './assets/beachball2.png')
         this.load.audio('vroom', './music/vroom.mp3')
         this.load.audio('vroom2', './music/vroom2.mp3')
@@ -155,9 +154,13 @@ create() {
         player.body.onOverlap = true;
         player2.body.onOverlap = true;
 
+
     //win the game if you hit the finishline
         this.physics.world.on('overlap', function () {
-            this.scene.restart()
+            player.destroy()
+            player2.destroy()
+            player = this.physics.add.image(200, 400, 'player1').setScale(1);
+            player2 = this.physics.add.image(200, 475, 'player2').setScale(1);
             this.scene.switch('Scene3');
             scoreUpdate()
           }, this);

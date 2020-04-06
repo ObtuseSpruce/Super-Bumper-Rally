@@ -9,7 +9,7 @@
     this.load.audio('click', './music/click.mp3')
 	}
 	create() {
-
+        var destroy = this.scene.get('Scene1')
         var title2 = this.add.image(400,200,'title2');
         var restarttext = this.add.text(300,500, 'restart the game!');
         clicksound = this.sound.add('click')
