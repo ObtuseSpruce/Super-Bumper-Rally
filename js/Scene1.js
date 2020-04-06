@@ -147,8 +147,8 @@ create() {
 
 
     //set cameras to follow the players
-        camera2.startFollow(player2, true, 0.8, 0.8)
-        camera.startFollow(player, true, 0.8, 0.8)
+        camera2.startFollow(player, true, 0.8, 0.8)
+        camera.startFollow(player2, true, 0.8, 0.8)
 
     //win condition set to onOverlap
         player.body.onOverlap = true;
@@ -168,10 +168,8 @@ create() {
         this.physics.add.overlap(player2, finishline)
 
     //adds timer to the camera
-        t = this.add.text(200, 500, { font: "32px Arial", fill: "#ffffff", align: "center" });
+        t = this.add.text(150, 25, { font: "32px Arial", fill: "#ffffff", align: "center" });
         t.setScrollFactor(0);
-       
-
 
     }
     
@@ -190,7 +188,7 @@ create() {
     {
         this.physics.velocityFromRotation(player.rotation, 600, player.body.acceleration);
         vroom.play({
-            volume: .3,
+            volume: .2,
             delay: .01,
         })
     }
@@ -220,7 +218,7 @@ create() {
     {
         this.physics.velocityFromRotation(player2.rotation, 600, player2.body.acceleration);
         vroom.play({
-            volume: .3,
+            volume: .2,
             delay: .01,
         })
     }

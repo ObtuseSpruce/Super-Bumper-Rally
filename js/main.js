@@ -1,7 +1,6 @@
 let config = {
     width: 800,
     height: 600,
-    // backgroundColor: 0xabcdef,
     physics: {
         default: 'arcade',
         arcade: {
@@ -9,42 +8,44 @@ let config = {
         }
     },
     scene: [Scene2, Scene1, Scene3]
-    // {
-    //     preload: preload,
-    //     create: create,
-    //     update: update
-    // }
 };
+
+//objects in the game
 var beachball;
 var beachball2;
 var player;
 var player2;
-var wall;
 var racetrack;
 var finishline;
+//timer related variables
 var timerInt;
+var timernum = 0;
+//player 1 keyboard inputs
 var cursors;
-var cursors2;
+//player2 keyboard inputs
 var left2;
 var right2;
 var up2;
 var down2;
-var timernum = 0;
+//score keeping variables
 var score;
 var t;
 var scoreName;
 var scoretext;
+var name;
 var LS_NAMES;
 var LS_SCORE = 0;
-var name;
 var currentHighscore;
-var emitter;
+//music variables
 var racemusic;
 var clicksound;
 var vroom;
 var vroom2
+//special effect variables
+var emitter;
 var emitter3
 
+//highscore related functions
 function compare () {
     if (LS_SCORE === 0 || score <= LS_SCORE ) {
         name = prompt('what is your name!')
@@ -52,6 +53,7 @@ function compare () {
         LS_SCORE = JSON.parse(localStorage.getItem('key'));
     }
 }
+
 function scoreUpdate () {
     score = (Math.floor((timernum * .02) * 100) / 100)
     compare();
@@ -63,13 +65,13 @@ function setHighscore () {
     console.log("localstorage: ", LS_SCORE);
 }
 
+//timer for the game
 function onEvent () {
     timernum++
-    // console.log(score)
 }
 
+//main game
 let game = new Phaser.Game(config);
-// game.scene.add('titleScene')
-// game.scene.start('titleScene')
+
 
 
